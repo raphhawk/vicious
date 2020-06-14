@@ -1,0 +1,545 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/materials/tiles2a.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/materials/thorns3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/materials/waypoints.gd" type="Script" id=4]
+[ext_resource path="res://Assets/gear/newg/2b.png" type="Texture" id=5]
+[ext_resource path="res://Assets/gear/newg/2a.png" type="Texture" id=6]
+[ext_resource path="res://Assets/gear/newg/2e.png" type="Texture" id=7]
+[ext_resource path="res://src/materials/gear1.gd" type="Script" id=8]
+[ext_resource path="res://Assets/gear/newg/2c.png" type="Texture" id=9]
+[ext_resource path="res://Assets/gear/newg/2g.png" type="Texture" id=10]
+[ext_resource path="res://Assets/gear/newg/2f.png" type="Texture" id=11]
+[ext_resource path="res://Assets/gear/newg/2d.png" type="Texture" id=12]
+[ext_resource path="res://Assets/gear/newg/2h.png" type="Texture" id=13]
+[ext_resource path="res://src/materials/gear.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/materials/switchdoor.gd" type="Script" id=15]
+[ext_resource path="res://Assets/switch/action/idle/switch1.png" type="Texture" id=16]
+[ext_resource path="res://src/materials/switch.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/switch/action/switch2.png" type="Texture" id=18]
+[ext_resource path="res://Assets/switch/action/switch1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/switch/action/switch3.png" type="Texture" id=20]
+[ext_resource path="res://Assets/switch/action/switch4.png" type="Texture" id=21]
+[ext_resource path="res://src/materials/switch2.gd" type="Script" id=22]
+[ext_resource path="res://src/materials/intelligear.gd" type="Script" id=23]
+[ext_resource path="res://Assets/advplat.png" type="Texture" id=24]
+[ext_resource path="res://src/materials/geardetector.gd" type="Script" id=25]
+[ext_resource path="res://src/materials/gearb.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/materials/gate.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Assets/switch/switch2.png" type="Texture" id=28]
+[ext_resource path="res://Assets/switch/switch1.png" type="Texture" id=29]
+[ext_resource path="res://Assets/switch/switch5.png" type="Texture" id=30]
+[ext_resource path="res://Assets/switch/switch4.png" type="Texture" id=31]
+[ext_resource path="res://Assets/switch/switch3.png" type="Texture" id=32]
+[ext_resource path="res://src/materials/thorns3.gd" type="Script" id=33]
+[ext_resource path="res://src/materials/bg_lv3.tscn" type="PackedScene" id=34]
+[ext_resource path="res://src/materials/gear1.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Assets/gear_ex.png" type="Texture" id=36]
+[ext_resource path="res://src/materials/portal_conc.tscn" type="PackedScene" id=37]
+[ext_resource path="res://src/materials/audgear.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Assets/sfx/switch.wav" type="AudioStream" id=39]
+[ext_resource path="res://Assets/sfx/chop.wav" type="AudioStream" id=40]
+[ext_resource path="res://src/Levels/pause.tscn" type="PackedScene" id=41]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "spin",
+"speed": 100.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 49.4712
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 575.038, 15.2828 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 14.2125
+
+[sub_resource type="TileSet" id=5]
+0/name = "advplat.png 0"
+0/texture = ExtResource( 24 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 123, 167, 96, 19 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 93.8416, 8.03412 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 16 ) ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "on",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Action",
+"speed": 4.0
+} ]
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 10.4169
+
+[node name="lv2" type="Node2D"]
+
+[node name="bg" parent="." instance=ExtResource( 34 )]
+
+[node name="gear_ex" type="Sprite" parent="."]
+modulate = Color( 0.109804, 0.0980392, 0.0980392, 1 )
+position = Vector2( 1112.84, -117.051 )
+rotation = -0.296706
+scale = Vector2( 2.01571, 1.91502 )
+texture = ExtResource( 36 )
+
+[node name="gear5" type="KinematicBody2D" parent="."]
+position = Vector2( 464.39, 381.859 )
+collision_layer = 2
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+editor_process = false
+speed = 250.0
+waypoints_path = NodePath("../wp6")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="gear5"]
+position = Vector2( -0.636047, 0.169601 )
+scale = Vector2( 1.58964, 1.56755 )
+frames = SubResource( 1 )
+animation = "spin"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gear5"]
+position = Vector2( -0.925476, 0.506104 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="gear5"]
+
+[node name="gearb" parent="gear5" instance=ExtResource( 26 )]
+position = Vector2( 2.9865, 6.4589 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="audgear2" parent="gear5" instance=ExtResource( 38 )]
+position = Vector2( 2, 2 )
+volume_db = -19.299
+
+[node name="geardetector" type="Area2D" parent="."]
+position = Vector2( 886.044, 324.682 )
+script = ExtResource( 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="geardetector"]
+position = Vector2( 205.888, 70.8878 )
+shape = SubResource( 3 )
+
+[node name="gear1" parent="." instance=ExtResource( 35 )]
+
+[node name="AnimatedSprite" parent="gear1" index="0"]
+frame = 1
+
+[node name="gear" parent="gear1" index="3"]
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="audgear" parent="gear1" index="4"]
+position = Vector2( -8, 0 )
+
+[node name="gear4" type="KinematicBody2D" parent="."]
+position = Vector2( 982, -82 )
+collision_layer = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp5")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="gear4"]
+position = Vector2( 14.7327, 2.63825 )
+scale = Vector2( 0.517252, 0.525879 )
+frames = SubResource( 1 )
+animation = "spin"
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gear4"]
+position = Vector2( 15, 3 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="gear4"]
+
+[node name="gear" parent="gear4" instance=ExtResource( 14 )]
+position = Vector2( 14.9865, 2.4589 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="audgear2" parent="gear4" instance=ExtResource( 38 )]
+position = Vector2( 10, 2 )
+
+[node name="gear2" type="KinematicBody2D" parent="."]
+position = Vector2( -36.9367, 11.2097 )
+collision_layer = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp3")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="gear2"]
+position = Vector2( 14.7327, 2.63825 )
+scale = Vector2( 0.517252, 0.525879 )
+frames = SubResource( 1 )
+animation = "spin"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gear2"]
+position = Vector2( 15, 3 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="gear2"]
+
+[node name="gear" parent="gear2" instance=ExtResource( 14 )]
+position = Vector2( 14.9865, 2.4589 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="audgear2" parent="gear2" instance=ExtResource( 38 )]
+position = Vector2( 18, 10 )
+
+[node name="gear3" type="KinematicBody2D" parent="."]
+position = Vector2( -106, 166 )
+collision_layer = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp4")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="gear3"]
+position = Vector2( 14.7327, 2.63825 )
+scale = Vector2( 0.517252, 0.525879 )
+frames = SubResource( 1 )
+animation = "spin"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gear3"]
+position = Vector2( 15, 3 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="gear3"]
+
+[node name="gear" parent="gear3" instance=ExtResource( 14 )]
+position = Vector2( 13.9865, 2.4589 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="audgear2" parent="gear3" instance=ExtResource( 38 )]
+position = Vector2( 9, 2 )
+
+[node name="tiles" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 134.725, 117.724 )
+collision_mask = 24
+speed = Vector2( 150, 500 )
+gravity = 2000.0
+
+[node name="thorns" parent="." instance=ExtResource( 3 )]
+position = Vector2( 345.987, 192.459 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 667.987, 128.459 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 685.987, 128.459 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 933.49, 32.631 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 924.49, 32.631 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 977.49, 32.631 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1021.49, 32.631 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 837.49, 384.631 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 985.49, 384.631 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1149.49, 384.631 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1519.49, 384.631 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1563.85, 384.537 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1608.43, 384.181 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1644.42, 384.181 )
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1390.67, 32.6934 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2014.67, -511.307 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1970.67, -511.307 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1926.67, -511.307 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1882.67, -511.307 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1347.67, 32.6934 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1303.67, 32.6934 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1260.67, 32.6934 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1216.07, 33.0938 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1065.17, 32.998 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1108.17, 32.998 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1151.17, 32.998 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1180.17, 32.998 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="thorns2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 608.987, 94.459 )
+rotation = -1.5708
+script = ExtResource( 33 )
+gates = "res://src/Levels/lv2b.tscn"
+
+[node name="wp1" type="Node2D" parent="."]
+script = ExtResource( 4 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp1"]
+position = Vector2( 258, 91 )
+
+[node name="Position2D2" type="Position2D" parent="wp1"]
+position = Vector2( 397, 92 )
+
+[node name="wp3" type="Node2D" parent="."]
+position = Vector2( -344, 0 )
+script = ExtResource( 4 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp3"]
+position = Vector2( 328.948, 3.63142 )
+
+[node name="Position2D2" type="Position2D" parent="wp3"]
+position = Vector2( 331.414, 187.379 )
+
+[node name="wp4" type="Node2D" parent="."]
+position = Vector2( -416, 128 )
+script = ExtResource( 4 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp4"]
+position = Vector2( 307.948, 34.6314 )
+
+[node name="Position2D2" type="Position2D" parent="wp4"]
+position = Vector2( 311.263, 254.106 )
+
+[node name="wp5" type="Node2D" parent="."]
+position = Vector2( 688, -112 )
+script = ExtResource( 4 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp5"]
+position = Vector2( 317.948, 23.6314 )
+
+[node name="Position2D2" type="Position2D" parent="wp5"]
+position = Vector2( 535.263, -41.8945 )
+
+[node name="wp6" type="Node2D" parent="."]
+position = Vector2( 688, 264 )
+script = ExtResource( 4 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp6"]
+position = Vector2( 768.617, 114.435 )
+
+[node name="Position2D2" type="Position2D" parent="wp6"]
+position = Vector2( -221.653, 115.32 )
+
+[node name="wp2" type="Node2D" parent="."]
+script = ExtResource( 4 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp2"]
+position = Vector2( 1568.66, 276.249 )
+
+[node name="Position2D2" type="Position2D" parent="wp2"]
+position = Vector2( 1568.07, -501.423 )
+
+[node name="switch" parent="." instance=ExtResource( 17 )]
+
+[node name="switchdoor" type="KinematicBody2D" parent="."]
+position = Vector2( 1617.56, -516.213 )
+collision_layer = 16
+collision_mask = 0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 200.0
+waypoints_path = NodePath("../wp2")
+
+[node name="Sprite" type="Sprite" parent="switchdoor"]
+
+[node name="TileMap" type="TileMap" parent="switchdoor/Sprite"]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 95, 16 )
+format = 1
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="switchdoor"]
+position = Vector2( -0.36707, -7.8028 )
+shape = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="switchdoor"]
+
+[node name="switch2" type="Area2D" parent="switchdoor"]
+position = Vector2( -62.6506, -23.5103 )
+collision_layer = 16
+collision_mask = 8
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="switchdoor/switch2"]
+position = Vector2( 0.258667, 1.7932 )
+scale = Vector2( 1.27637, 1.27637 )
+frames = SubResource( 7 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="switchdoor/switch2"]
+shape = SubResource( 8 )
+
+[node name="audswitch" type="AudioStreamPlayer" parent="switchdoor/switch2"]
+stream = ExtResource( 39 )
+
+[node name="gate" parent="." instance=ExtResource( 27 )]
+position = Vector2( 1898.7, -97.7248 )
+gates = "res://src/Levels/Lv1a.tscn"
+
+[node name="portal_conc" parent="." instance=ExtResource( 37 )]
+
+[node name="chop" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1952, -104 )
+stream = ExtResource( 40 )
+autoplay = true
+
+[node name="pause" parent="." instance=ExtResource( 41 )]
+[connection signal="timeout" from="gear5/Timer" to="gear5" method="_on_Timer_timeout"]
+[connection signal="timeout" from="gear4/Timer" to="gear4" method="_on_Timer_timeout"]
+[connection signal="timeout" from="gear2/Timer" to="gear2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="gear3/Timer" to="gear3" method="_on_Timer_timeout"]
+
+[editable path="bg"]
+
+[editable path="gear5/audgear2"]
+
+[editable path="gear1"]
+
+[editable path="gear1/gear"]
+
+[editable path="gear3/gear"]

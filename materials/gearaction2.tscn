@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/sfx/gear.wav" type="AudioStream" id=1]
+
+[node name="gearaction2" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+volume_db = -15.146
+pitch_scale = 3.13

@@ -1,0 +1,712 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://src/materials/thorns2.gd" type="Script" id=1]
+[ext_resource path="res://Assets/bg3.png" type="Texture" id=2]
+[ext_resource path="res://Assets/bg1.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/materials/thorns.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/materials/thorns2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/materials/mp.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/materials/tiles.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/materials/gate.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/materials/box.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Levels/pause.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/sfx/viv.wav" type="AudioStream" id=13]
+[ext_resource path="res://src/materials/gate_mirrored.tscn" type="PackedScene" id=14]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=8]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=10]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=12]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=14]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=16]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=18]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.02, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.02 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="lv1" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ -314.494, 2112.33 ]
+}
+
+[node name="bg3" type="Sprite" parent="."]
+position = Vector2( 882.91, -137.231 )
+scale = Vector2( 4.58216, 2.7886 )
+texture = ExtResource( 2 )
+
+[node name="bg1" type="Sprite" parent="."]
+position = Vector2( 712.614, 150.643 )
+scale = Vector2( 0.911127, 0.891512 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 201, 124, 217, 203 )
+
+[node name="gate_mirrored" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1063.84, 365.195 )
+
+[node name="tiles" parent="." instance=ExtResource( 8 )]
+
+[node name="mp" parent="." instance=ExtResource( 7 )]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 490.628, 281.264 )
+collision_mask = 24
+speed = Vector2( 150, 500 )
+gravity = 2000.0
+
+[node name="Position2D" type="Position2D" parent="Player"]
+position = Vector2( 16, 5 )
+
+[node name="cTimer" type="Timer" parent="Player"]
+wait_time = 0.1
+one_shot = true
+
+[node name="gate" parent="." instance=ExtResource( 9 )]
+position = Vector2( 89.3444, 302.735 )
+scale = Vector2( 1.008, 1 )
+gates = "res://src/Levels/lv2.tscn"
+
+[node name="Enemy" parent="." instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 589.575, 352.598 )
+motion/sync_to_physics = false
+speed = Vector2( 30000, 100 )
+
+[node name="box" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1410.34, 87.7757 )
+mass = 6687.24
+gravity_scale = 9.8
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="thorns" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1556.99, 256.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="thorns12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1547.99, 256.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="thorns3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 673.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns3" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns3" index="3"]
+anims/START = SubResource( 1 )
+anims/fadein = SubResource( 2 )
+
+[node name="thorns4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 727.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns4" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns4" index="3"]
+anims/START = SubResource( 3 )
+anims/fadein = SubResource( 4 )
+
+[node name="thorns5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 781.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns5" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns5" index="3"]
+anims/START = SubResource( 5 )
+anims/fadein = SubResource( 6 )
+
+[node name="thorns6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 835.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns6" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns6" index="3"]
+anims/START = SubResource( 7 )
+anims/fadein = SubResource( 8 )
+
+[node name="thorns7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 889.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns7" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns7" index="3"]
+anims/START = SubResource( 9 )
+anims/fadein = SubResource( 10 )
+
+[node name="thorns8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 943.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns8" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns8" index="3"]
+anims/START = SubResource( 11 )
+anims/fadein = SubResource( 12 )
+
+[node name="thorns9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 997.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns9" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns9" index="3"]
+anims/START = SubResource( 13 )
+anims/fadein = SubResource( 14 )
+
+[node name="thorns10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1051.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns10" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns10" index="3"]
+anims/START = SubResource( 15 )
+anims/fadein = SubResource( 16 )
+
+[node name="thorns11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1060.99, 384.459 )
+collision_layer = 2
+script = ExtResource( 1 )
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="CollisionShape2D" parent="thorns11" index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="thorns11" index="3"]
+anims/START = SubResource( 17 )
+anims/fadein = SubResource( 18 )
+
+[node name="stab" parent="thorns11" index="4"]
+pause_mode = 1
+
+[node name="thorns2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1548.99, 121.459 )
+collision_layer = 2
+gates = "res://src/Levels/Lv1.tscn"
+
+[node name="pause" parent="." instance=ExtResource( 12 )]
+
+[node name="viv" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 143, 298 )
+stream = ExtResource( 13 )
+autoplay = true
+
+[editable path="thorns"]
+
+[editable path="thorns3"]
+
+[editable path="thorns4"]
+
+[editable path="thorns5"]
+
+[editable path="thorns6"]
+
+[editable path="thorns7"]
+
+[editable path="thorns8"]
+
+[editable path="thorns9"]
+
+[editable path="thorns10"]
+
+[editable path="thorns11"]

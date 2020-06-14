@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/sfx/gear.wav" type="AudioStream" id=1]
+
+[node name="audgear2" type="AudioStreamPlayer2D"]
+position = Vector2( -982, 82 )
+stream = ExtResource( 1 )
+volume_db = -23.588
+pitch_scale = 0.76
+autoplay = true

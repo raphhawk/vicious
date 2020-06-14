@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Levels/pause_screen.tscn" type="PackedScene" id=2]
+
+[node name="pause" type="CanvasLayer"]
+
+[node name="pause_screen" parent="." instance=ExtResource( 2 )]
+visible = false

@@ -1,0 +1,48 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/materials/gear1.gd" type="Script" id=1]
+[ext_resource path="res://src/materials/audgear.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/gear/newg/2f.png" type="Texture" id=3]
+[ext_resource path="res://Assets/gear/newg/2e.png" type="Texture" id=4]
+[ext_resource path="res://Assets/gear/newg/2c.png" type="Texture" id=5]
+[ext_resource path="res://Assets/gear/newg/2b.png" type="Texture" id=6]
+[ext_resource path="res://Assets/gear/newg/2h.png" type="Texture" id=7]
+[ext_resource path="res://Assets/gear/newg/2d.png" type="Texture" id=8]
+[ext_resource path="res://Assets/gear/newg/2a.png" type="Texture" id=10]
+[ext_resource path="res://Assets/gear/newg/2g.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "spin",
+"speed": 100.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 14.2125
+
+[node name="gear1" type="KinematicBody2D"]
+position = Vector2( 271, 91 )
+collision_layer = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 14.7327, 2.63825 )
+scale = Vector2( 0.517252, 0.525879 )
+frames = SubResource( 1 )
+animation = "spin"
+frame = 5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 15, 3 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="audgear2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10, 2 )

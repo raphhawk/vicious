@@ -1,0 +1,389 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/ideas/idea3.png" type="Texture" id=1]
+
+[node name="grass" type="Node2D"]
+
+[node name="idea3" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -237.308, 214.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea4" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -189.308, 214.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea7" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -221.308, 190.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea8" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -253.308, 157.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea19" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -253.308, 69.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea20" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -205.308, 69.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea5" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -149.308, 230.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea9" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -93.3085, 294.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea10" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -46.3085, 294.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea11" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -14.3085, 294.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea12" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 241.692, 294.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea13" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 249.692, 254.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea14" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 249.692, 222.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea15" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 289.692, 222.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea16" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 329.692, 214.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea56" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 369.692, 70.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea57" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 561.692, 54.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea62" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 697.692, 70.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea63" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 729.692, 70.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea64" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 753.692, 62.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea65" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 777.692, 70.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea66" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 809.692, 70.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea21" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 749.692, 222.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea22" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 813.692, 222.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea23" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 925.692, 230.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea24" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 909.692, 86.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea25" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 949.692, 70.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea26" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 989.692, 54.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea27" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1037.69, 78.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea28" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1373.69, 62.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea29" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1454.69, 70.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea30" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1510.69, 70.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea32" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1454.69, -57.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea33" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1542.69, -137.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea34" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1518.69, -177.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea35" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1542.69, -193.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea36" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1518.69, -265.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea37" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1542.69, -305.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea38" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1334.69, -337.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea39" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1326.69, -345.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea40" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1099.69, -305.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea41" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 995.692, -241.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea42" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 875.692, -185.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea43" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 707.692, -105.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea44" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 619.692, -57.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea45" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 595.692, -73.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea46" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 571.692, -73.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea58" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 699.692, -313.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea59" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 571.692, -441.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea60" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 539.692, -457.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea61" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 507.692, -457.756 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea47" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 228.692, -73.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea48" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 268.692, -81.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea49" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 309.692, -65.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea50" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -50.3085, -57.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea51" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -74.3085, -73.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea52" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -186.308, -73.7561 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea53" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -234.308, -81.7562 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea54" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -234.308, -81.7562 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea55" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -234.308, -81.7562 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea31" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 1478.69, 30.2439 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea17" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 369.692, 239.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea18" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( 369.692, 239.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )
+
+[node name="idea6" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.992157, 0.713726, 1 )
+position = Vector2( -141.308, 270.244 )
+scale = Vector2( 2.41312, 1.94208 )
+texture = ExtResource( 1 )

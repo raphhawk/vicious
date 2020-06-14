@@ -1,0 +1,247 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/begenv.png" type="Texture" id=1]
+[ext_resource path="res://Assets/begenv2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/cloudsnsky.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/canvas.png" type="Texture" id=5]
+[ext_resource path="res://src/materials/Player_end_detector2.gd" type="Script" id=6]
+[ext_resource path="res://src/Levels/Player_end_detector.gd" type="Script" id=7]
+[ext_resource path="res://Assets/sfx/jungle.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/sfx/gvals.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/control/thanks.png" type="Texture" id=10]
+[ext_resource path="res://Assets/control/story.png" type="Texture" id=11]
+[ext_resource path="res://Assets/control/dev.png" type="Texture" id=12]
+[ext_resource path="res://Assets/control/dir.png" type="Texture" id=13]
+[ext_resource path="res://Assets/control/test.png" type="Texture" id=14]
+[ext_resource path="res://Assets/control/cre.png" type="Texture" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 319.872, 44.0961 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 63.4289 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1.95972, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[node name="end" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ 1241.14 ]
+}
+
+[node name="ParallaxBackground7" type="ParallaxBackground" parent="."]
+layer = -3
+
+[node name="cloudsnsky" type="Sprite" parent="ParallaxBackground7"]
+modulate = Color( 0.356863, 0.0823529, 0.0823529, 1 )
+position = Vector2( 303.646, 160.983 )
+scale = Vector2( 3.30781, 1.33749 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+scroll_base_scale = Vector2( 0.9, 0.9 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="begenv" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.6 )
+position = Vector2( 389.992, 203.831 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = -2
+scroll_base_scale = Vector2( 0.8, 0.8 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+
+[node name="begenv3" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.6 )
+position = Vector2( 253.992, 203.831 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+layer = -1
+scroll_base_scale = Vector2( 0.9, 0.9 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+
+[node name="begenv" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.6 )
+position = Vector2( -250.008, 203.831 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+layer = -2
+scroll_base_scale = Vector2( 0.8, 0.8 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+
+[node name="begenv3" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.6 )
+position = Vector2( -386.008, 203.831 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxBackground6" type="ParallaxBackground" parent="."]
+layer = -1
+scroll_base_scale = Vector2( 0.9, 0.9 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground6"]
+
+[node name="begenv" type="Sprite" parent="ParallaxBackground6/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.6 )
+position = Vector2( 973.992, 203.831 )
+texture = ExtResource( 1 )
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
+layer = -2
+scroll_base_scale = Vector2( 0.8, 0.8 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground5"]
+
+[node name="begenv3" type="Sprite" parent="ParallaxBackground5/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.6 )
+position = Vector2( 837.992, 203.831 )
+texture = ExtResource( 1 )
+
+[node name="begenv2" type="Sprite" parent="."]
+position = Vector2( 312.129, 131.296 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="begenv2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="begenv2/StaticBody2D"]
+position = Vector2( 0, 184 )
+shape = SubResource( 1 )
+
+[node name="begenv5" type="Sprite" parent="."]
+position = Vector2( 936.129, 131.296 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="begenv5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="begenv5/StaticBody2D"]
+position = Vector2( 0, 184 )
+shape = SubResource( 1 )
+
+[node name="begenv4" type="Sprite" parent="."]
+position = Vector2( -316.871, 131.296 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="begenv4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="begenv4/StaticBody2D"]
+position = Vector2( 0, 184 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="begenv4/StaticBody2D"]
+position = Vector2( -309, 76 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="begenv4/StaticBody2D"]
+position = Vector2( 1562, 76 )
+shape = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 793.305, 257.131 )
+speed = Vector2( 150, 0 )
+gravity = 2000.0
+
+[node name="CollisionShape2D" parent="Player" index="1"]
+position = Vector2( -1.33291, -0.0484962 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_left = -617
+limit_right = 1241
+smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="canvas" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 320.245, 184.656 )
+scale = Vector2( 1.02604, 1.03418 )
+texture = ExtResource( 5 )
+
+[node name="thanks" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="thanks" type="Sprite" parent="thanks"]
+visible = false
+position = Vector2( 478.174, 151.867 )
+texture = ExtResource( 10 )
+
+[node name="story" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="story" type="Sprite" parent="story"]
+visible = false
+position = Vector2( 412.996, 215.934 )
+scale = Vector2( 0.634144, 0.634144 )
+texture = ExtResource( 11 )
+
+[node name="dev" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="dev" type="Sprite" parent="dev"]
+visible = false
+position = Vector2( 516.734, 256.669 )
+scale = Vector2( 0.181162, 0.180613 )
+texture = ExtResource( 12 )
+
+[node name="dir" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="dir" type="Sprite" parent="dir"]
+visible = false
+position = Vector2( 417.776, 139.351 )
+scale = Vector2( 0.278453, 0.278453 )
+texture = ExtResource( 13 )
+
+[node name="t1" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="test" type="Sprite" parent="t1"]
+visible = false
+position = Vector2( 335.602, 93.0917 )
+scale = Vector2( 0.282924, 0.282924 )
+texture = ExtResource( 14 )
+
+[node name="tools" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="cre" type="Sprite" parent="tools"]
+visible = false
+position = Vector2( 540.379, 204.667 )
+scale = Vector2( 0.379602, 0.379602 )
+texture = ExtResource( 15 )
+
+[node name="Player_end_detector" type="Area2D" parent="."]
+position = Vector2( 656, 240 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_end_detector"]
+position = Vector2( 136, 39 )
+shape = SubResource( 3 )
+
+[node name="Player_end_detector2" type="Area2D" parent="."]
+position = Vector2( 208, 240 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_end_detector2"]
+position = Vector2( -160, 39 )
+shape = SubResource( 4 )
+
+[node name="jungle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -11.106
+autoplay = true
+
+[node name="gvals" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1088, 128 )
+stream = ExtResource( 9 )
+
+[editable path="Player"]

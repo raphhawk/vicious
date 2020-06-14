@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/materials/movingplatform.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 60, 15 )
+
+[node name="movingplatform" type="KinematicBody2D"]
+position = Vector2( 1002.67, 302.921 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 200.0
+waypoints_path = NodePath("../waypoints")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

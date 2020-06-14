@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/bg1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/bg.png" type="Texture" id=2]
+
+[node name="bg" type="Sprite"]
+modulate = Color( 0.309804, 0.541176, 0.517647, 1 )
+position = Vector2( 959.875, -88.6473 )
+scale = Vector2( 3.3485, 2.28181 )
+texture = ExtResource( 2 )
+
+[node name="bg1" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( -4.14404, 143.351 )
+scale = Vector2( 0.172962, 0.257448 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 17.7254, -3.04918, 178.24, 503.328 )
+
+[node name="bg2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 48.4165, 143.216 )
+scale = Vector2( 0.172963, 0.256915 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 17.7254, -3.04918, 175.502, 503.328 )
+
+[node name="bg3" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 21.896, 87.2063 )
+scale = Vector2( 0.124052, 0.115562 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 197.49, -35.9262, 193.741, 98.5408 )
+
+[node name="bg6" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 72.3083, 143.351 )
+scale = Vector2( 0.172962, 0.257448 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 17.7254, -3.04918, 178.24, 503.328 )
+
+[node name="bg5" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 124.869, 143.216 )
+scale = Vector2( 0.172963, 0.256915 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 17.7254, -3.04918, 175.502, 503.328 )
+
+[node name="bg4" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 98.3481, 87.2063 )
+scale = Vector2( 0.124052, 0.115562 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 197.49, -35.9262, 193.741, 98.5408 )
+
+[node name="bg9" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( -87.7616, 143.351 )
+scale = Vector2( 0.172962, 0.257448 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 17.7254, -3.04918, 178.24, 503.328 )
+
+[node name="bg8" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( -35.2009, 143.216 )
+scale = Vector2( 0.172963, 0.256915 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 17.7254, -3.04918, 175.502, 503.328 )
+
+[node name="bg7" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( -61.7227, 87.2063 )
+scale = Vector2( 0.124052, 0.115562 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 197.49, -35.9262, 193.741, 98.5408 )

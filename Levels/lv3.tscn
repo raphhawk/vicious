@@ -1,0 +1,1720 @@
+[gd_scene load_steps=72 format=2]
+
+[ext_resource path="res://src/materials/tiles3.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/tiles.png" type="Texture" id=3]
+[ext_resource path="res://src/materials/hidden_pf.gd" type="Script" id=4]
+[ext_resource path="res://src/materials/waypoints2.gd" type="Script" id=5]
+[ext_resource path="res://src/materials/thorns.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/materials/thorns2.gd" type="Script" id=7]
+[ext_resource path="res://src/materials/gear1_lv3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/materials/hidden_pf_thorns.gd" type="Script" id=9]
+[ext_resource path="res://src/materials/hidden_pf_thorns.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/materials/lv3_gear_detector.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/materials/lv3_gear_detector.gd" type="Script" id=12]
+[ext_resource path="res://src/materials/hidden_pf_thorns2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/materials/hidden_pf_thorns3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/materials.svg" type="Texture" id=15]
+[ext_resource path="res://src/materials/moving_thorns.gd" type="Script" id=16]
+[ext_resource path="res://src/materials/moving_thorns_detector.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/materials/moving_thorns_detector.gd" type="Script" id=18]
+[ext_resource path="res://src/materials/mt_player_detector.gd" type="Script" id=19]
+[ext_resource path="res://src/materials/mt_player_detector2.gd" type="Script" id=20]
+[ext_resource path="res://src/materials/mt_player_detector3.gd" type="Script" id=21]
+[ext_resource path="res://src/materials/mt_player_detector4.gd" type="Script" id=22]
+[ext_resource path="res://src/materials/hidden_pf_detector2.gd" type="Script" id=23]
+[ext_resource path="res://src/materials/hidden_pf_detector3.gd" type="Script" id=24]
+[ext_resource path="res://src/materials/moving_thorns_detector2.gd" type="Script" id=25]
+[ext_resource path="res://src/materials/gate_mirrored.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/materials/bgs.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Assets/gear_ex.png" type="Texture" id=28]
+[ext_resource path="res://src/materials/box.tscn" type="PackedScene" id=29]
+[ext_resource path="res://src/materials/switch_lv3.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/Levels/pause.tscn" type="PackedScene" id=31]
+[ext_resource path="res://src/materials/mp_lv3.gd" type="Script" id=32]
+[ext_resource path="res://src/materials/mt_player_detector5.gd" type="Script" id=33]
+[ext_resource path="res://src/materials/mt_player_detector6.gd" type="Script" id=34]
+[ext_resource path="res://src/materials/mt_player_detector7.gd" type="Script" id=35]
+[ext_resource path="res://src/materials/mt_player_detector8.gd" type="Script" id=36]
+[ext_resource path="res://Assets/switch/boxswitch/bswitch.png" type="Texture" id=37]
+[ext_resource path="res://src/materials/bswitch.gd" type="Script" id=38]
+[ext_resource path="res://src/materials/thorns4.tscn" type="PackedScene" id=39]
+[ext_resource path="res://src/materials/mp_lv5_detector.gd" type="Script" id=40]
+[ext_resource path="res://Assets/advplat.png" type="Texture" id=41]
+[ext_resource path="res://src/materials/mt_player_detector9.gd" type="Script" id=42]
+[ext_resource path="res://src/materials/switch_lv4.gd" type="Script" id=43]
+[ext_resource path="res://src/materials/gate.tscn" type="PackedScene" id=44]
+[ext_resource path="res://src/materials/grass_lv3.tscn" type="PackedScene" id=45]
+[ext_resource path="res://src/materials/dungeon.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Assets/sfx/shift.wav" type="AudioStream" id=47]
+[ext_resource path="res://Assets/sfx/switch.wav" type="AudioStream" id=48]
+[ext_resource path="res://Assets/sfx/liz.wav" type="AudioStream" id=49]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.32618, 141.501 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "tiles.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 51, 73, 13, 13 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 107.251, 82.1266 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 118.086, 87.2924 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 90.1293, 40.5787 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 28.7654, 339.327 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 28.1982, 358.541 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 15.3403, 49.8774 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 7.4848, 40.1031 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 191.159, 30.1391 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10, 5.54973 )
+
+[sub_resource type="TileSet" id=12]
+0/name = "materials.svg 0"
+0/texture = ExtResource( 15 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 20, 77, 8, 13 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 32.0301, 5.89738 )
+
+[sub_resource type="CircleShape2D" id=14]
+radius = 35.4581
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 50.0544, 34.2561 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 30.1829, 10 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 81.4764, 157.293 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 1.66954, 7.24097 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 64.2761, 19.3032 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 128.971, 17.0662 )
+
+[sub_resource type="RectangleShape2D" id=21]
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 129.078, 23.0082 )
+
+[node name="lv3" type="Node2D"]
+position = Vector2( 2, 0 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [ -309.308 ]
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+
+[node name="bgs" parent="." instance=ExtResource( 27 )]
+
+[node name="grass" parent="bgs" instance=ExtResource( 45 )]
+
+[node name="clouds" type="Node2D" parent="bgs"]
+
+[node name="dungeon" parent="bgs" instance=ExtResource( 46 )]
+
+[node name="gear_ex" type="Sprite" parent="."]
+modulate = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
+position = Vector2( 784.459, 69.2577 )
+scale = Vector2( 1.31932, 1 )
+texture = ExtResource( 28 )
+
+[node name="thorns" parent="." instance=ExtResource( 6 )]
+position = Vector2( -129.118, 264.737 )
+rotation = 1.5708
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="thorns"]
+position = Vector2( -377.08, -1058.33 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="thorns"]
+position = Vector2( -393.081, -1386.33 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="thorns"]
+position = Vector2( -164.345, -708.334 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="thorns"]
+position = Vector2( 456.652, -1983.34 )
+shape = SubResource( 1 )
+
+[node name="thorns12" parent="." instance=ExtResource( 39 )]
+position = Vector2( 383.987, 860.459 )
+rotation = 1.5708
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns13" parent="." instance=ExtResource( 39 )]
+position = Vector2( 287.987, 879.459 )
+rotation = 1.5708
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2158.64, 896.485 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2106.64, 896.485 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2053.64, 896.485 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2001.64, 896.485 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 801.64, 896.485 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1949.64, 896.485 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1536.51, -185.526 )
+rotation = -1.5708
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1536.51, -236.526 )
+rotation = -1.5708
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1536.51, -140.526 )
+rotation = -1.5708
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1536.51, -284.526 )
+rotation = -1.5708
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="hidden_pf5" type="KinematicBody2D" parent="."]
+position = Vector2( 1311.12, -221.693 )
+rotation = -1.5708
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp7")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf5"]
+position = Vector2( -10.7831, -24.2304 )
+scale = Vector2( 2.01247, 4.48243 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 10.8955, 89.582, 106.147, 36.3135 )
+
+[node name="TileMap" type="TileMap" parent="hidden_pf5/Sprite"]
+position = Vector2( -283.56, -57.5203 )
+rotation = -3.14159
+scale = Vector2( 0.589896, 0.362289 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 13, 13 )
+format = 1
+tile_data = PoolIntArray( -1048620, 0, 0, -1048619, 0, 0, -1048618, 0, 0, -1048617, 0, 0, -1048616, 0, 0, -1048615, 0, 0, -1048614, 0, 0, -1048613, 0, 0, -1048612, 0, 0, -1048611, 0, 0, -1048610, 0, 0, -1048609, 0, 0, -1048608, 0, 0, -1048607, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf5"]
+position = Vector2( -10, -24 )
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="hidden_pf5"]
+
+[node name="hidden_pf_thorn" parent="hidden_pf5" instance=ExtResource( 14 )]
+position = Vector2( -24.014, -28.541 )
+script = ExtResource( 9 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="hidden_pf4" type="KinematicBody2D" parent="."]
+position = Vector2( 1215.12, -53.693 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp5")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf4"]
+position = Vector2( 0.266479, -24.7304 )
+scale = Vector2( 2.22095, 4.51021 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 10.8955, 89.582, 106.147, 36.3135 )
+
+[node name="TileMap" type="TileMap" parent="hidden_pf4/Sprite"]
+position = Vector2( -283.56, -57.5203 )
+rotation = -3.14159
+scale = Vector2( 0.589896, 0.362289 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 13, 13 )
+format = 1
+tile_data = PoolIntArray( -1048620, 0, 0, -1048619, 0, 0, -1048618, 0, 0, -1048617, 0, 0, -1048616, 0, 0, -1048615, 0, 0, -1048614, 0, 0, -1048613, 0, 0, -1048612, 0, 0, -1048611, 0, 0, -1048610, 0, 0, -1048609, 0, 0, -1048608, 0, 0, -1048607, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf4"]
+position = Vector2( 0, -24 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="hidden_pf4"]
+
+[node name="hidden_pf_thorn" parent="hidden_pf4" instance=ExtResource( 13 )]
+position = Vector2( -337.132, -152.848 )
+script = ExtResource( 9 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="CollisionShape2D" parent="hidden_pf4/hidden_pf_thorn" index="0"]
+position = Vector2( 337.576, 220.21 )
+
+[node name="hidden_pf3" type="KinematicBody2D" parent="."]
+position = Vector2( 481.282, 154.307 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp6")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf3"]
+position = Vector2( -0.304882, 6.76933 )
+scale = Vector2( 1.69521, 2.76023 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 10.8955, 89.582, 106.147, 36.3135 )
+
+[node name="TileMap" type="TileMap" parent="hidden_pf3/Sprite"]
+position = Vector2( -283.56, -57.5203 )
+rotation = -3.14159
+scale = Vector2( 0.589896, 0.362289 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 13, 13 )
+format = 1
+tile_data = PoolIntArray( -1048620, 0, 0, -1048619, 0, 0, -1048618, 0, 0, -1048617, 0, 0, -1048616, 0, 0, -1048615, 0, 0, -1048614, 0, 0, -1048613, 0, 0, -1048612, 0, 0, -1048611, 0, 0, -1048610, 0, 0, -1048609, 0, 0, -1048608, 0, 0, -1048607, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf3"]
+position = Vector2( 0, 16 )
+shape = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="hidden_pf3"]
+
+[node name="hidden_pf_thorns" parent="hidden_pf3" instance=ExtResource( 10 )]
+position = Vector2( -14.0135, -37.5411 )
+script = ExtResource( 9 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="shift" type="AudioStreamPlayer2D" parent="hidden_pf3"]
+stream = ExtResource( 47 )
+volume_db = -17.19
+pitch_scale = 1.19
+autoplay = true
+
+[node name="hidden_pf2" type="KinematicBody2D" parent="."]
+position = Vector2( 803.125, -116.475 )
+collision_layer = 2
+collision_mask = 19
+script = ExtResource( 4 )
+waypoints_path = NodePath("../wp2")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf2"]
+position = Vector2( -9.18591, 543.986 )
+scale = Vector2( 1.49654, 5.84293 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 11.4387, 11.8878, 37.9934, 116.051 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf2"]
+position = Vector2( -9, 544.575 )
+shape = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="hidden_pf2"]
+
+[node name="gear_ex2" type="Sprite" parent="."]
+modulate = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
+position = Vector2( 807.659, 839.258 )
+scale = Vector2( 1.64846, 1 )
+texture = ExtResource( 28 )
+
+[node name="gear_ex3" type="Sprite" parent="."]
+modulate = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
+position = Vector2( 1761.19, 789.994 )
+rotation = 1.5708
+scale = Vector2( 0.99057, 0.894739 )
+texture = ExtResource( 28 )
+
+[node name="gear_ex4" type="Sprite" parent="."]
+modulate = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
+position = Vector2( 1822.19, 789.994 )
+rotation = 1.5708
+scale = Vector2( 0.99057, 0.894739 )
+texture = ExtResource( 28 )
+
+[node name="lv3gear6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1713.09, 731.282 )
+speed = 600.0
+waypoints_path = NodePath("../wp18")
+
+[node name="lv3_gear_detector" parent="lv3gear6" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1849.09, 611.282 )
+speed = 600.0
+waypoints_path = NodePath("../wp21")
+
+[node name="lv3_gear_detector" parent="lv3gear9" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1801.09, 731.282 )
+speed = 600.0
+waypoints_path = NodePath("../wp19")
+
+[node name="lv3_gear_detector" parent="lv3gear7" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1874.74, 827.08 )
+speed = 600.0
+waypoints_path = NodePath("../wp20")
+
+[node name="lv3_gear_detector" parent="lv3gear8" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 690.74, 827.08 )
+speed = 600.0
+waypoints_path = NodePath("../wp23")
+
+[node name="lv3_gear_detector" parent="lv3gear10" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear13" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1061.77, 407.57 )
+speed = 600.0
+waypoints_path = NodePath("../wp31")
+
+[node name="lv3_gear_detector" parent="lv3gear13" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear14" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1199.77, 512.57 )
+speed = 600.0
+waypoints_path = NodePath("../wp34")
+
+[node name="lv3_gear_detector" parent="lv3gear14" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear11" parent="." instance=ExtResource( 8 )]
+position = Vector2( 450.74, 891.08 )
+speed = 600.0
+waypoints_path = NodePath("../wp29")
+
+[node name="lv3_gear_detector" parent="lv3gear11" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear12" parent="." instance=ExtResource( 8 )]
+position = Vector2( 866.74, 892.08 )
+speed = 600.0
+waypoints_path = NodePath("../wp30")
+
+[node name="lv3_gear_detector" parent="lv3gear12" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="hidden_pf8" type="KinematicBody2D" parent="."]
+position = Vector2( 2152.12, 877.525 )
+rotation = 1.5708
+collision_layer = 2
+collision_mask = 19
+script = ExtResource( 4 )
+waypoints_path = NodePath("../wp17")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf8"]
+position = Vector2( -9.18591, 524.927 )
+scale = Vector2( 1.49654, 6.17152 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 11.4387, 11.8878, 37.9934, 116.051 )
+
+[node name="Sprite2" type="Sprite" parent="hidden_pf8"]
+position = Vector2( 12.5015, 1017.53 )
+scale = Vector2( 0.512439, 1.05431 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 14, 38, 30, 75 )
+
+[node name="Sprite3" type="Sprite" parent="hidden_pf8"]
+position = Vector2( 4.28162, 930.41 )
+scale = Vector2( 1.02849, 1.26638 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 14, 38, 30, 75 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf8"]
+position = Vector2( -9.52515, 525 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="hidden_pf8"]
+position = Vector2( 4.00336, 928 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="hidden_pf8"]
+position = Vector2( 12.2462, 1017 )
+shape = SubResource( 9 )
+
+[node name="Timer" type="Timer" parent="hidden_pf8"]
+
+[node name="hidden_pf" type="KinematicBody2D" parent="."]
+position = Vector2( 540.609, 265.67 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf"]
+position = Vector2( 0.372192, 1.27658 )
+scale = Vector2( 3.55699, 2.04499 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 10.9308, 96.3318, 107.875, 30.9409 )
+
+[node name="Sprite2" type="Sprite" parent="hidden_pf"]
+position = Vector2( -199.078, -25 )
+scale = Vector2( 0.91216, 1 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 26, 91, 21, 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf"]
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="hidden_pf"]
+position = Vector2( -199, -25 )
+shape = SubResource( 11 )
+
+[node name="Timer" type="Timer" parent="hidden_pf"]
+
+[node name="wp" type="Node2D" parent="."]
+position = Vector2( 52.0502, 50.0499 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp"]
+position = Vector2( 16.2313, 211.919 )
+
+[node name="Position2D2" type="Position2D" parent="wp"]
+position = Vector2( 488.559, 215.62 )
+
+[node name="wp2" type="Node2D" parent="."]
+position = Vector2( 340.05, -286.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp2"]
+position = Vector2( 462.542, 155.209 )
+
+[node name="Position2D2" type="Position2D" parent="wp2"]
+position = Vector2( 463.075, 251.475 )
+
+[node name="wp33" type="Node2D" parent="."]
+position = Vector2( 340.05, -614.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp33"]
+position = Vector2( 462.542, 155.209 )
+
+[node name="Position2D2" type="Position2D" parent="wp33"]
+position = Vector2( 463.075, 251.475 )
+
+[node name="wp3" type="Node2D" parent="."]
+position = Vector2( 220.05, -214.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp3"]
+position = Vector2( 462.542, 283.209 )
+
+[node name="Position2D2" type="Position2D" parent="wp3"]
+position = Vector2( 637.698, 283.74 )
+
+[node name="wp28" type="Node2D" parent="."]
+position = Vector2( 730.05, -15.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp28"]
+position = Vector2( 462.542, 283.209 )
+
+[node name="Position2D2" type="Position2D" parent="wp28"]
+position = Vector2( 637.698, 283.74 )
+
+[node name="wp4" type="Node2D" parent="."]
+position = Vector2( 19.05, -225.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp4"]
+position = Vector2( 462.542, 283.209 )
+
+[node name="Position2D2" type="Position2D" parent="wp4"]
+position = Vector2( 462.232, 380.257 )
+
+[node name="wp5" type="Node2D" parent="."]
+position = Vector2( 675.05, -257.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp5"]
+position = Vector2( 533.716, 18.7977 )
+
+[node name="Position2D2" type="Position2D" parent="wp5"]
+position = Vector2( 534.968, 245.707 )
+
+[node name="wp6" type="Node2D" parent="."]
+position = Vector2( 19.05, -225.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp6"]
+position = Vector2( 462.542, 283.209 )
+
+[node name="Position2D2" type="Position2D" parent="wp6"]
+position = Vector2( 462.232, 380.257 )
+
+[node name="wp7" type="Node2D" parent="."]
+position = Vector2( 723.05, -809.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp7"]
+position = Vector2( 724.074, 595.781 )
+
+[node name="Position2D2" type="Position2D" parent="wp7"]
+position = Vector2( 470.165, 596.042 )
+
+[node name="wp8" type="Node2D" parent="."]
+position = Vector2( 642.05, -525.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp8"]
+position = Vector2( 672.074, 593.781 )
+
+[node name="Position2D2" type="Position2D" parent="wp8"]
+position = Vector2( 456.165, 594.042 )
+
+[node name="wp9" type="Node2D" parent="."]
+position = Vector2( 536.05, -892.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp9"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp9"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp32" type="Node2D" parent="."]
+position = Vector2( 755.05, -413.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp32"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp32"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp24" type="Node2D" parent="."]
+position = Vector2( 1624.05, 131.05 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp24"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp24"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp25" type="Node2D" parent="."]
+position = Vector2( 1624.05, 3.04999 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp25"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp25"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp26" type="Node2D" parent="."]
+position = Vector2( 1096.05, -59.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp26"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp26"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp27" type="Node2D" parent="."]
+position = Vector2( 1688.05, 67.05 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp27"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp27"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp10" type="Node2D" parent="."]
+position = Vector2( 280.05, -765.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp10"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp10"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp11" type="Node2D" parent="."]
+position = Vector2( -143.95, -701.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp11"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp11"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp12" type="Node2D" parent="."]
+position = Vector2( -204.95, -701.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp12"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp12"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp15" type="Node2D" parent="."]
+position = Vector2( 23.05, -701.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp15"]
+position = Vector2( 456.074, 663.346 )
+
+[node name="Position2D2" type="Position2D" parent="wp15"]
+position = Vector2( 456.165, 631.863 )
+
+[node name="wp13" type="Node2D" parent="."]
+position = Vector2( -52.95, -925.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp13"]
+position = Vector2( 470.302, 845.435 )
+
+[node name="Position2D2" type="Position2D" parent="wp13"]
+position = Vector2( 470.863, 586.886 )
+
+[node name="wp14" type="Node2D" parent="."]
+position = Vector2( -92.95, -989.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp14"]
+position = Vector2( 470.302, 839.435 )
+
+[node name="Position2D2" type="Position2D" parent="wp14"]
+position = Vector2( 470.863, 586.886 )
+
+[node name="wp16" type="Node2D" parent="."]
+position = Vector2( 932.05, 26.05 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp16"]
+position = Vector2( 327.846, 851.435 )
+
+[node name="Position2D2" type="Position2D" parent="wp16"]
+position = Vector2( 612.763, 851.435 )
+
+[node name="wp17" type="Node2D" parent="."]
+position = Vector2( 1404.05, 26.05 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp17"]
+position = Vector2( 741.845, 851.435 )
+
+[node name="Position2D2" type="Position2D" parent="wp17"]
+position = Vector2( 964.763, 851.435 )
+
+[node name="wp18" type="Node2D" parent="."]
+position = Vector2( 1004.05, -114.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp18"]
+position = Vector2( 741.845, 844.435 )
+
+[node name="Position2D2" type="Position2D" parent="wp18"]
+position = Vector2( 740.33, 969.141 )
+
+[node name="wp21" type="Node2D" parent="."]
+position = Vector2( 1108.05, -354.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp21"]
+position = Vector2( 741.845, 844.435 )
+
+[node name="Position2D2" type="Position2D" parent="wp21"]
+position = Vector2( 740.33, 969.141 )
+
+[node name="wp19" type="Node2D" parent="."]
+position = Vector2( 1068.05, -114.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp19"]
+position = Vector2( 741.845, 969.141 )
+
+[node name="Position2D2" type="Position2D" parent="wp19"]
+position = Vector2( 741.845, 844.435 )
+
+[node name="wp20" type="Node2D" parent="."]
+position = Vector2( 1148.05, -114.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp20"]
+position = Vector2( 724.87, 953.141 )
+
+[node name="Position2D2" type="Position2D" parent="wp20"]
+position = Vector2( 926.21, 953.141 )
+
+[node name="wp23" type="Node2D" parent="."]
+position = Vector2( -27.95, -114.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp23"]
+position = Vector2( 724.87, 953.141 )
+
+[node name="Position2D2" type="Position2D" parent="wp23"]
+position = Vector2( 926.21, 953.141 )
+
+[node name="wp31" type="Node2D" parent="."]
+position = Vector2( 243.05, -473.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp31"]
+position = Vector2( 827.304, 891.966 )
+
+[node name="Position2D2" type="Position2D" parent="wp31"]
+position = Vector2( 827.304, 986.966 )
+rotation = 1.57079
+
+[node name="wp34" type="Node2D" parent="."]
+position = Vector2( 372.05, -379.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp34"]
+position = Vector2( 827.304, 891.966 )
+
+[node name="Position2D2" type="Position2D" parent="wp34"]
+position = Vector2( 827.304, 986.966 )
+rotation = 1.57079
+
+[node name="wp29" type="Node2D" parent="."]
+position = Vector2( -259.95, -58.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp29"]
+position = Vector2( 724.87, 953.141 )
+
+[node name="Position2D2" type="Position2D" parent="wp29"]
+position = Vector2( 926.21, 953.141 )
+
+[node name="wp30" type="Node2D" parent="."]
+position = Vector2( 156.05, -58.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp30"]
+position = Vector2( 724.87, 953.141 )
+
+[node name="Position2D2" type="Position2D" parent="wp30"]
+position = Vector2( 918.21, 953.141 )
+
+[node name="wp22" type="Node2D" parent="."]
+position = Vector2( 700.05, -250.95 )
+script = ExtResource( 5 )
+editor_process = true
+line_color = Color( 0.228943, 0.710254, 0.945312, 1 )
+line_width = 10.0
+triangle_color = Color( 0.722656, 0.908997, 1, 1 )
+
+[node name="Position2D" type="Position2D" parent="wp22"]
+position = Vector2( 771.87, 1001.7 )
+
+[node name="Position2D2" type="Position2D" parent="wp22"]
+position = Vector2( 771.87, 780.435 )
+
+[node name="lv3gear2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1097.09, 67.2825 )
+speed = 600.0
+waypoints_path = NodePath("../wp8")
+
+[node name="lv3_gear_detector" parent="lv3gear2" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns" type="KinematicBody2D" parent="."]
+position = Vector2( 992.124, -222.604 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp9")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns"]
+
+[node name="mt_detector" parent="moving_thorns" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns5" type="KinematicBody2D" parent="."]
+position = Vector2( 2080.12, 794.396 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp24")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns5"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns5"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns5"]
+
+[node name="mt_detector" parent="moving_thorns5" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.122948 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns7" type="KinematicBody2D" parent="."]
+position = Vector2( 2144.12, 730.396 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp27")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns7"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns7"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns7"]
+
+[node name="mt_detector" parent="moving_thorns7" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.122948 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns8" type="KinematicBody2D" parent="."]
+position = Vector2( 1552.12, 602.396 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp26")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns8"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns8"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns8"]
+
+[node name="mt_detector" parent="moving_thorns8" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.122948 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns6" type="KinematicBody2D" parent="."]
+position = Vector2( 2080.12, 666.396 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp25")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns6"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns6"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns6"]
+
+[node name="mt_detector" parent="moving_thorns6" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns9" type="KinematicBody2D" parent="."]
+position = Vector2( 1232.12, 244.396 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp32")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns9"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns9"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns9"]
+
+[node name="mt_detector" parent="moving_thorns9" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns3" type="KinematicBody2D" parent="."]
+position = Vector2( 312.124, -65.604 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp11")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns3"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns3"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns3"]
+
+[node name="mt_detector" parent="moving_thorns3" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns4" type="KinematicBody2D" parent="."]
+position = Vector2( 250.124, -65.604 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp12")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns4"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns4"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns4"]
+
+[node name="mt_detector" parent="moving_thorns4" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="moving_thorns2" type="KinematicBody2D" parent="."]
+position = Vector2( 736.124, -94.6037 )
+script = ExtResource( 16 )
+speed = 125.0
+waypoints_path = NodePath("../wp10")
+
+[node name="TileMap" type="TileMap" parent="moving_thorns2"]
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thorns2"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="moving_thorns2"]
+
+[node name="mt_detector" parent="moving_thorns2" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 18 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear1" parent="." instance=ExtResource( 8 )]
+position = Vector2( 681.095, 67.2825 )
+speed = 600.0
+waypoints_path = NodePath("../wp3")
+
+[node name="lv3_gear_detector" parent="lv3gear1" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 415.956, -69.7175 )
+speed = 600.0
+
+[node name="lv3_gear_detector" parent="lv3gear3" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 129.095, -69.7175 )
+speed = 600.0
+
+[node name="lv3_gear_detector" parent="lv3gear5" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="lv3gear4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 353.095, -69.7175 )
+speed = 600.0
+
+[node name="lv3_gear_detector" parent="lv3gear4" instance=ExtResource( 11 )]
+position = Vector2( 14.9865, 2.4589 )
+script = ExtResource( 12 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="mt_player_detector" type="Area2D" parent="."]
+position = Vector2( 1016.12, -296.604 )
+script = ExtResource( 19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector"]
+position = Vector2( 1.65228, 16.0965 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector5" type="Area2D" parent="."]
+position = Vector2( 2088.12, 751.396 )
+script = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector5"]
+position = Vector2( -1.34772, 16.0965 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector7" type="Area2D" parent="."]
+position = Vector2( 2161.12, 687.396 )
+script = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector7"]
+position = Vector2( -1.34772, 16.0965 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector6" type="Area2D" parent="."]
+position = Vector2( 2069.12, 626.396 )
+script = ExtResource( 34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector6"]
+position = Vector2( -1.34772, 16.0965 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector9" type="Area2D" parent="."]
+position = Vector2( 1197.12, 234.396 )
+script = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector9"]
+position = Vector2( -1.34772, 16.0965 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector8" type="Area2D" parent="."]
+position = Vector2( 1549.12, 570.396 )
+script = ExtResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector8"]
+position = Vector2( 2.65228, 16.0965 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector2" type="Area2D" parent="."]
+position = Vector2( 760.124, -168.604 )
+script = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector2"]
+position = Vector2( -24.4597, 39.9103 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector3" type="Area2D" parent="."]
+position = Vector2( 332.124, -104.604 )
+script = ExtResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector3"]
+position = Vector2( -21.4597, 39.9103 )
+shape = SubResource( 14 )
+
+[node name="mt_player_detector4" type="Area2D" parent="."]
+position = Vector2( 276.124, -104.604 )
+script = ExtResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mt_player_detector4"]
+position = Vector2( -21.4597, 39.9103 )
+shape = SubResource( 14 )
+
+[node name="hidden_pf6" type="KinematicBody2D" parent="."]
+position = Vector2( 417, -320 )
+script = ExtResource( 4 )
+waypoints_path = NodePath("../wp13")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf6"]
+position = Vector2( -18.0497, -17.8793 )
+scale = Vector2( 1.56405, 2.08359 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 30, 94, 64, 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf6"]
+position = Vector2( -18, -18 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="hidden_pf6"]
+
+[node name="moving_thorns5" type="KinematicBody2D" parent="hidden_pf6"]
+position = Vector2( -16.876, 17.3963 )
+
+[node name="TileMap" type="TileMap" parent="hidden_pf6/moving_thorns5"]
+visible = false
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf6/moving_thorns5"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="hidden_pf6/moving_thorns5"]
+
+[node name="mt_detector" parent="hidden_pf6/moving_thorns5" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 25 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="hidden_pf_detector" type="Area2D" parent="hidden_pf6"]
+position = Vector2( 0, 8 )
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf6/hidden_pf_detector"]
+position = Vector2( -38, -53 )
+shape = SubResource( 16 )
+
+[node name="hidden_pf7" type="KinematicBody2D" parent="."]
+position = Vector2( 377, -384 )
+script = ExtResource( 4 )
+waypoints_path = NodePath("../wp14")
+
+[node name="Sprite" type="Sprite" parent="hidden_pf7"]
+position = Vector2( -18.0497, -17.8793 )
+scale = Vector2( 1.56405, 2.08359 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 30, 94, 64, 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf7"]
+position = Vector2( -18, -18 )
+shape = SubResource( 15 )
+
+[node name="Timer" type="Timer" parent="hidden_pf7"]
+
+[node name="moving_thorns6" type="KinematicBody2D" parent="hidden_pf7"]
+position = Vector2( 0.124023, 15.3963 )
+
+[node name="TileMap" type="TileMap" parent="hidden_pf7/moving_thorns6"]
+visible = false
+position = Vector2( -16, 6 )
+tile_set = SubResource( 12 )
+cell_size = Vector2( 8, 13 )
+format = 1
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf7/moving_thorns6"]
+shape = SubResource( 13 )
+
+[node name="Timer" type="Timer" parent="hidden_pf7/moving_thorns6"]
+
+[node name="mt_detector" parent="hidden_pf7/moving_thorns6" instance=ExtResource( 17 )]
+position = Vector2( -0.013504, -0.5411 )
+script = ExtResource( 25 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="hidden_pf_detector2" type="Area2D" parent="."]
+position = Vector2( 433, -14 )
+script = ExtResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hidden_pf_detector2"]
+position = Vector2( -38, -44 )
+shape = SubResource( 16 )
+
+[node name="mp_lv4" type="KinematicBody2D" parent="."]
+position = Vector2( 1367.75, 267.79 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp28")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv4"]
+position = Vector2( 168, -41 )
+shape = SubResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="mp_lv4"]
+
+[node name="Timer" type="Timer" parent="mp_lv4"]
+
+[node name="tiles" parent="." instance=ExtResource( 1 )]
+
+[node name="thorns16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1048.06, 224.395 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 968.06, 224.395 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns20" parent="." instance=ExtResource( 6 )]
+position = Vector2( 869.06, 320.395 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1063.64, 415.925 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="thorns19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1192.64, 511.925 )
+script = ExtResource( 7 )
+gates = "res://src/Levels/lv3.tscn"
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -219.379, 203.919 )
+collision_mask = 24
+speed = Vector2( 150, 500 )
+gravity = 2000.0
+
+[node name="Position2D" type="Position2D" parent="Player"]
+position = Vector2( 16, 5 )
+
+[node name="Timer" type="Timer" parent="Player"]
+process_mode = 0
+wait_time = 0.001
+
+[node name="gate_mirrored" parent="." instance=ExtResource( 26 )]
+position = Vector2( -135.171, -64.4607 )
+gates = "res://src/Levels/lv3a.tscn"
+
+[node name="bswitch" type="Area2D" parent="."]
+position = Vector2( 195, 888 )
+collision_layer = 16
+collision_mask = 24
+script = ExtResource( 38 )
+
+[node name="Sprite" type="Sprite" parent="bswitch"]
+texture = ExtResource( 37 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 6.66604, 14.4723 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bswitch"]
+position = Vector2( -1, 0 )
+shape = SubResource( 18 )
+
+[node name="audswitch" type="AudioStreamPlayer" parent="bswitch"]
+stream = ExtResource( 48 )
+
+[node name="box" parent="." instance=ExtResource( 29 )]
+position = Vector2( 336.405, 819.339 )
+
+[node name="switch_lv3" parent="." instance=ExtResource( 30 )]
+position = Vector2( 1722.45, 564.303 )
+
+[node name="switch_lv4" parent="." instance=ExtResource( 30 )]
+position = Vector2( 853.851, 500.012 )
+script = ExtResource( 43 )
+
+[node name="mp_lv3" type="KinematicBody2D" parent="."]
+position = Vector2( 1471.92, 529.485 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+waypoints_path = NodePath("../wp22")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv3"]
+shape = SubResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="mp_lv3"]
+
+[node name="Timer" type="Timer" parent="mp_lv3"]
+
+[node name="mp_lv5" type="KinematicBody2D" parent="."]
+position = Vector2( 959.92, 497.485 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv5"]
+position = Vector2( -1, -1 )
+shape = SubResource( 20 )
+
+[node name="Sprite" type="Sprite" parent="mp_lv5"]
+position = Vector2( 113, -15 )
+texture = ExtResource( 41 )
+region_enabled = true
+region_rect = Rect2( 34.4016, 158.292, 31.8812, 64.8432 )
+
+[node name="Timer" type="Timer" parent="mp_lv5"]
+
+[node name="mp_lv5_detector" type="Area2D" parent="mp_lv5"]
+collision_layer = 8
+script = ExtResource( 40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv5/mp_lv5_detector"]
+position = Vector2( 122, 23 )
+shape = SubResource( 21 )
+
+[node name="mp_lv7" type="KinematicBody2D" parent="."]
+position = Vector2( 1045.87, 225.308 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv7"]
+position = Vector2( 172, -10 )
+shape = SubResource( 22 )
+
+[node name="Timer" type="Timer" parent="mp_lv7"]
+
+[node name="mp_lv5_detector" type="Area2D" parent="mp_lv7"]
+position = Vector2( -76, -16 )
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv7/mp_lv5_detector"]
+position = Vector2( 122, 23 )
+shape = SubResource( 21 )
+
+[node name="mp_lv8" type="KinematicBody2D" parent="."]
+position = Vector2( 852.87, 307.308 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv8"]
+position = Vector2( 172, -10 )
+shape = SubResource( 22 )
+
+[node name="Timer" type="Timer" parent="mp_lv8"]
+
+[node name="mp_lv5_detector" type="Area2D" parent="mp_lv8"]
+position = Vector2( -76, -16 )
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv8/mp_lv5_detector"]
+position = Vector2( 122, 23 )
+shape = SubResource( 21 )
+
+[node name="mp_lv9" type="KinematicBody2D" parent="."]
+position = Vector2( 916.87, 353.308 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv9"]
+position = Vector2( 172, -10 )
+shape = SubResource( 22 )
+
+[node name="Timer" type="Timer" parent="mp_lv9"]
+
+[node name="mp_lv5_detector" type="Area2D" parent="mp_lv9"]
+position = Vector2( -76, -16 )
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv9/mp_lv5_detector"]
+position = Vector2( 122, 23 )
+shape = SubResource( 21 )
+
+[node name="mp_lv10" type="KinematicBody2D" parent="."]
+position = Vector2( 916.87, 399.308 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv10"]
+position = Vector2( 172, -10 )
+shape = SubResource( 22 )
+
+[node name="Timer" type="Timer" parent="mp_lv10"]
+
+[node name="mp_lv5_detector" type="Area2D" parent="mp_lv10"]
+position = Vector2( -76, -16 )
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mp_lv10/mp_lv5_detector"]
+position = Vector2( 122, 23 )
+shape = SubResource( 21 )
+
+[node name="gate" parent="." instance=ExtResource( 44 )]
+position = Vector2( 385.836, -449.805 )
+gates = "res://src/Levels/lv4.tscn"
+
+[node name="pause" parent="." instance=ExtResource( 31 )]
+
+[node name="liz" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -144, -64 )
+stream = ExtResource( 49 )
+volume_db = 12.866
+autoplay = true
+[connection signal="timeout" from="hidden_pf5/Timer" to="hidden_pf5" method="_on_Timer_timeout"]
+[connection signal="timeout" from="hidden_pf4/Timer" to="hidden_pf4" method="_on_Timer_timeout"]
+[connection signal="timeout" from="hidden_pf3/Timer" to="hidden_pf3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="hidden_pf2/Timer" to="hidden_pf2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="hidden_pf8/Timer" to="hidden_pf8" method="_on_Timer_timeout"]
+[connection signal="timeout" from="hidden_pf/Timer" to="hidden_pf" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns/Timer" to="moving_thorns" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns5/Timer" to="moving_thorns5" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns7/Timer" to="moving_thorns7" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns8/Timer" to="moving_thorns8" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns6/Timer" to="moving_thorns6" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns9/Timer" to="moving_thorns9" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns3/Timer" to="moving_thorns3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns4/Timer" to="moving_thorns4" method="_on_Timer_timeout"]
+[connection signal="timeout" from="moving_thorns2/Timer" to="moving_thorns2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="hidden_pf6/moving_thorns5/Timer" to="hidden_pf6/moving_thorns5" method="_on_Timer_timeout"]
+[connection signal="timeout" from="hidden_pf7/moving_thorns6/Timer" to="hidden_pf7/moving_thorns6" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]
+
+[editable path="thorns"]
+
+[editable path="hidden_pf4/hidden_pf_thorn"]
+
+[editable path="lv3gear1/lv3_gear_detector"]
