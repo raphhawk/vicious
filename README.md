@@ -1,4 +1,4 @@
-# vicious
+# [vicious] (https://raphael-hawk.itch.io/vicious)
 
 ![alt text](https://github.com/raphhawk/vicious/blob/master/icon.png "Title")
 
