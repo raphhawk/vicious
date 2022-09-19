@@ -1,9 +1,6 @@
-# vicious
+# [vicious]([vicious] (https://raphael-hawk.itch.io/vicious))
 
 ![alt text](https://github.com/raphhawk/vicious/blob/master/icon.png "Title")
-
-play [vicious] (https://raphael-hawk.itch.io/vicious)
-
 
 A 2D-Platformer Game created with Godot Game Engine
 
